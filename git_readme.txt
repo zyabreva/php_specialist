@@ -88,9 +88,11 @@ git config --global user.email myemail@mail.ru
 
 git init
 git add .
-git commit -a -m 'first commit'
-git remote add origin git@github.com:username/reponame.git
-git push -u origin master
+git commit -a -m 'first commit' -а значит сохранить все изменения (если нет новых неоотлеживаемых файлов то не нужно делать add 
+git remote add php_specialist git@github.com:username/reponame.git -создает ссылку на удаленный репозитарий т.е связывает его с репозиторием на Github, дает ему локальное название которое потом можно использовать в push.
+git remote remove php_specialist - удаляет данную ссылку, на файлы на серве это не повлияет
+
+git push -u php_specialist master
 
 После этих команд на сервере GitHub образуется копии файлов того каталога, в котором были выполнены данные команды. Далее можно уже делать коммиты, заливки на сервер GitHub изменений, считывания изменений с сервера. Но это уже совсем другая история.
  

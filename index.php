@@ -58,19 +58,28 @@ else $welcome='Доброй ночи';
 			<!-- Навигация -->
 			<h2>Навигация по сайту</h2>
 			<!-- Меню -->
+			<?php
+			$left_menu=array(
+			'home' => 'index.php',
+			'about' => 'about.php',
+			'contact' => 'contact.php',
+			'table' => 'table.php',
+			'calc' => 'calc.php',
+			)
+			?>
 			<ul>
-				<li><a href='index.php'>Домой</a></li>
-				<li><a href='about.php'>О нас</a></li>
-				<li><a href='contact.php'>Контакты</a></li>
-				<li><a href='table.php'>Таблица умножения</a></li>
-				<li><a href='calc.php'>Калькулятор</a></li>
+				<li><a href='<?=$left_menu['home']?>'>Домой</a></li>
+				<li><a href='<?=$left_menu['about']?>'>О нас</a></li>
+				<li><a href='<?=$left_menu['contact']?>'>Контакты</a></li>
+				<li><a href='<?=$left_menu['table']?>'>Таблица умножения</a></li>
+				<li><a href='<?=$left_menu['calc']?>'>Калькулятор</a></li>
 			</ul>
 			<!-- Меню -->
 			<!-- Навигация -->
 		</div>
 		<div id="footer">
 			<!-- Нижняя часть страницы -->
-			&copy; <?php echo COPYRIGHT?>, 2000 - <?= strftime('%Y')?>
+			&copy; <?php echo COPYRIGHT?>, 2000 - <?= $year)?>
 			<!-- Нижняя часть страницы -->
 		</div>
 	</body>
