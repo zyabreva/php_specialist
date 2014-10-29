@@ -60,26 +60,26 @@ else $welcome='Доброй ночи';
 			<!-- Меню -->
 			<?php
 			$left_menu=array(
-			'home' => 'index.php',
-			'about' => 'about.php',
-			'contact' => 'contact.php',
-			'table' => 'table.php',
-			'calc' => 'calc.php',
-			)
+			array('link'=> 'Домой','href' => 'index.php'),
+			array('link'=> 'О нас','href' => 'about.php'),
+			array('link'=> 'Контакты','href' => 'contact.php'),
+			array('link'=> 'Таблица умножения','href' => 'table.php'),
+			array('link'=> 'Калькулятор','href' => 'calc.php')
+			);
 			?>
 			<ul>
-				<li><a href='<?=$left_menu['home']?>'>Домой</a></li>
-				<li><a href='<?=$left_menu['about']?>'>О нас</a></li>
-				<li><a href='<?=$left_menu['contact']?>'>Контакты</a></li>
-				<li><a href='<?=$left_menu['table']?>'>Таблица умножения</a></li>
-				<li><a href='<?=$left_menu['calc']?>'>Калькулятор</a></li>
+				<li><a href='<?=$left_menu[0]['href']?>'><?=$left_menu[0]['link']?></a></li>
+				<li><a href='<?=$left_menu[1]['href']?>'><?=$left_menu[1]['link']?></a></li>
+				<li><a href='<?=$left_menu[2]['href']?>'><?=$left_menu[2]['link']?></a></li>
+				<li><a href='<?=$left_menu[3]['href']?>'><?=$left_menu[3]['link']?></a></li>
+				<li><a href='<?=$left_menu[4]['href']?>'><?=$left_menu[4]['link']?></a></li>
 			</ul>
 			<!-- Меню -->
 			<!-- Навигация -->
 		</div>
 		<div id="footer">
 			<!-- Нижняя часть страницы -->
-			&copy; <?php echo COPYRIGHT?>, 2000 - <?= $year)?>
+			&copy; <?php echo COPYRIGHT?>, 2000 - <?= $year?>
 			<!-- Нижняя часть страницы -->
 		</div>
 	</body>
