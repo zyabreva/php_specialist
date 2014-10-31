@@ -1,3 +1,4 @@
+kdiff3 git-flow
 Открываем Git Bash
 git config --global user.name "zyabreva"
 git config --global user.email "alice1024@yandex.ru"
