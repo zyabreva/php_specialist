@@ -79,7 +79,7 @@ else $welcome='Доброй ночи';
 		</div>
 		<div id="footer">
 			<!-- Нижняя часть страницы -->
-			&copy; <?php echo COPYRIGHT?>, 2000 - <?= $year)?>
+			&copy; <?php echo COPYRIGHT?>, 2000 - <?= $year?>
 			<!-- Нижняя часть страницы -->
 		</div>
 	</body>
