@@ -1,5 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
+//<!-- Меню -->
+		$leftMenu=array(
+			array('link'=> 'Домой','href' => 'index.php'),
+			array('link'=> 'О нас','href' => 'about.php'),
+			array('link'=> 'Контакты','href' => 'contact.php'),
+			array('link'=> 'Таблица умножения','href' => 'table.php'),
+			array('link'=> 'Калькулятор','href' => 'calc.php')
+			);
+	
+//<!-- Меню -->			
 define('COPYRIGHT', 'Супер Мега Веб-мастер');
 //Установка локали и выбор значений даты
 setlocale(LC_ALL, "russian");
@@ -59,21 +69,13 @@ else $welcome='Доброй ночи';
 			<h2>Навигация по сайту</h2>
 			<!-- Меню -->
 			<?php
-			$left_menu=array(
-			array('link'=> 'Домой','href' => 'index.php'),
-			array('link'=> 'О нас','href' => 'about.php'),
-			array('link'=> 'Контакты','href' => 'contact.php'),
-			array('link'=> 'Таблица умножения','href' => 'table.php'),
-			array('link'=> 'Калькулятор','href' => 'calc.php')
-			);
+			echo "<ul>";
+				foreach ($leftMenu as $item){
+					echo "<li>";
+						echo "<a href ='{$item['href']}'>{$item['link']}</a>";
+					echo "</li>";
+				}
 			?>
-			<ul>
-				<li><a href='<?=$left_menu[0]['href']?>'><?=$left_menu[0]['link']?></a></li>
-				<li><a href='<?=$left_menu[1]['href']?>'><?=$left_menu[1]['link']?></a></li>
-				<li><a href='<?=$left_menu[2]['href']?>'><?=$left_menu[2]['link']?></a></li>
-				<li><a href='<?=$left_menu[3]['href']?>'><?=$left_menu[3]['link']?></a></li>
-				<li><a href='<?=$left_menu[4]['href']?>'><?=$left_menu[4]['link']?></a></li>
-			</ul>
 			<!-- Меню -->
 			<!-- Навигация -->
 		</div>
