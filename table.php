@@ -1,7 +1,20 @@
 <?php
-$cols =10;
-$rows = 10;
-$color = 'yellow';
+function drawTable($rows=10, $cols=10, $color='yellow'){
+echo "<table border='1' width='300'>";
+	for ($tr=1;$tr<=$rows;$tr++){
+		echo "<tr>";
+		for ($td=1;$td<=$cols;$td++)	{
+			if ($tr==1 or $td==1)
+				echo "<th style='background: $color'>" .$tr * $td . "</th>";
+			else
+				echo "<td>" .$tr * $td . "</td>";
+							}
+		echo "</tr>";
+		}
+echo"</table>";
+			
+}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
@@ -36,18 +49,7 @@ $color = 'yellow';
 			</form>
 			<!-- Таблица -->
 			<?php
-			echo "<table border='1' width='300'>";
-				for ($tr=1;$tr<=$rows;$tr++){
-					echo "<tr>";
-						for ($td=1;$td<=$cols;$td++)	{
-						if ($tr==1 or $td==1)
-							echo "<th style='background: $color'>" .$tr * $td . "</th>";
-							else
-							echo "<td>" .$tr * $td . "</td>";
-						}
-					echo "</tr>";
-				}
-			echo"</table>";
+				drawTable()
 			?>
 			<!-- Таблица -->
 			<!-- Область основного контента -->
