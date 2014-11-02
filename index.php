@@ -1,5 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
+function drawMenu($menu, $vertical=true){
+$style='';
+if(!$vertical)
+$style=" style = 'display:inline;margin-right:15px'";
+echo "<ul>";
+				foreach ($menu as $item){
+					echo "<li$style>";
+						echo "<a href ='{$item['href']}'>{$item['link']}</a>";
+					echo "</li>";
+				}
+				echo "</ul>";
+}
+
 //<!-- Меню -->
 		$leftMenu=array(
 			array('link'=> 'Домой','href' => 'index.php'),
@@ -69,18 +82,17 @@ else $welcome='Доброй ночи';
 			<h2>Навигация по сайту</h2>
 			<!-- Меню -->
 			<?php
-			echo "<ul>";
-				foreach ($leftMenu as $item){
-					echo "<li>";
-						echo "<a href ='{$item['href']}'>{$item['link']}</a>";
-					echo "</li>";
-				}
+				drawMenu($leftMenu);
 			?>
 			<!-- Меню -->
 			<!-- Навигация -->
 		</div>
 		<div id="footer">
 			<!-- Нижняя часть страницы -->
+						<?php
+				drawMenu($leftMenu, false);
+			?>
+			<hr>
 			&copy; <?php echo COPYRIGHT?>, 2000 - <?= $year?>
 			<!-- Нижняя часть страницы -->
 		</div>
